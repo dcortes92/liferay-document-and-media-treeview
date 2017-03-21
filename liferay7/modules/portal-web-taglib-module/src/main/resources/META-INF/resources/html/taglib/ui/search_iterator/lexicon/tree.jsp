@@ -23,7 +23,6 @@
 </div>
 
 <aui:script use="rl-content-tree-view">
-    console.log('test ', A);
     <portlet:namespace />treeView = new A.ContentTreeView();
 </aui:script>
 

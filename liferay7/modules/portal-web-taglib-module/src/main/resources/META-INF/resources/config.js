@@ -1,5 +1,4 @@
 ;(function() {
-    console.log('config');
     AUI().applyConfig({
         groups: {
             'rl-content-tree-view': {

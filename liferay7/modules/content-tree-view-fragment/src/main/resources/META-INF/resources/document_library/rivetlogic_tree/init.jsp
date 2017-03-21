@@ -29,9 +29,4 @@ if (themeDisplay.isSignedIn()) {
   DISPLAY_VIEWS[newDisplayIdx] = "tree";
 }
 %>
-
-<aui:script use="aui-base">
-var <portlet:namespace />treeView;
-</aui:script>
-
 <%-- RivetLogic Custom ENDS --%>

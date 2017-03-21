@@ -66,8 +66,10 @@ if (fileEntryTypeId != -1) {
 }
 %>
 
+<%-- RivetLogic Custom BEGINS --%>
 <liferay-frontend:management-bar-display-buttons
 	displayViews="<%= (DISPLAY_VIEWS.length <= 0)? dlPortletInstanceSettings.getDisplayViews() : DISPLAY_VIEWS %>"
 	portletURL="<%= displayStyleURL %>"
 	selectedDisplayStyle="<%= displayStyle %>"
 />
+<%-- RivetLogic Custom ENDS --%>

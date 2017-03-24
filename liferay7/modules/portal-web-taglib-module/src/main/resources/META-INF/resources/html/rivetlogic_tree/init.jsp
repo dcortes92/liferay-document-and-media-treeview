@@ -19,6 +19,14 @@
 
 <%-- RivetLogic Custom BEGINS --%>
 
+<%@ page import="com.liferay.document.library.kernel.model.DLFolderConstants" %>
+<%@ page import="com.liferay.document.library.kernel.service.DLAppServiceUtil" %>
+<%@ page import="com.liferay.portal.kernel.repository.model.Folder" %>
+
+<%
+String navigation = ParamUtil.getString(request, "navigation", "home");
+%>
+
 <aui:script use="aui-base">
 var <portlet:namespace />treeView;
 </aui:script>

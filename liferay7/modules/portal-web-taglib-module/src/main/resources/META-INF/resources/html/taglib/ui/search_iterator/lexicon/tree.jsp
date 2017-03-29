@@ -99,17 +99,19 @@ for (ResultRowSplitterEntry resultRowSplitterEntry : resultRowSplitterEntries) {
 		Map<String, Object> rowData = row.getData();
 		String entryTitle = (String)rowData.get("title");
 		if (rowData.get("folder") != null) {
+			long entryFolderId = (long)rowData.get("folder-id");
+			Folder folder = DLAppServiceUtil.getFolder(entryFolderId);
 		%>
 			<portlet:namespace />treeView.addContentFolder({
-				id : '',
+				id : '<%= entryFolderId %>',
 				label: '<%= entryTitle %>',
 				shortcut: <%= false %>,
 				showCheckbox: '',
-				rowCheckerId: '',
-				rowCheckerName: '',
-				parentFolderId: '<%= treeFolderId %>',
-				previewURL:'',
-				viewURL: ''
+				rowCheckerId: '<%= String.valueOf(folder.getFolderId()) %>',
+				rowCheckerName: '<%= Folder.class.getSimpleName() %>',
+				parentFolderId: '<%= folder.getParentFolderId() %>',
+				expanded : false,
+		   		fullLoaded : false
 			});
 		<%
 		}
